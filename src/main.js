@@ -1,9 +1,9 @@
 const express = require("express");
 const path = require("path");
 // Loading dev.env vars
-require("dotenv").config({
-  path: path.resolve(__dirname, "../config/dev.env"),
-});
+// require("dotenv").config({
+//   path: path.resolve(__dirname, "../config/dev.env"),
+// });
 
 const usersRouter = require("./routers/usersRouter");
 const taskRouter = require("./routers/tasksRouter");
