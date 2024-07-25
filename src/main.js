@@ -1,9 +1,10 @@
 const express = require("express");
 const path = require("path");
+const port = process.env.PORT;
 // Loading dev.env vars
-// require("dotenv").config({
-//   path: path.resolve(__dirname, "../config/dev.env"),
-// });
+require("dotenv").config({
+  path: path.resolve(__dirname, "../config/dev.env"),
+});
 
 const usersRouter = require("./routers/usersRouter");
 const taskRouter = require("./routers/tasksRouter");
@@ -17,7 +18,7 @@ app.use(usersRouter);
 app.use(taskRouter);
 
 connectToDb().then(() => {
-  app.listen(3000, () => {
-    console.log("server is up on port 3000");
+  app.listen(port, () => {
+    console.log(`server is up on port ${port}`);
   });
 });
