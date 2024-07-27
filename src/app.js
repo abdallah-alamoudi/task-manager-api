@@ -1,5 +1,3 @@
-const path = require("path");
-console.log(process.env.MONGODB_URL);
 const express = require("express");
 const usersRouter = require("./routers/usersRouter");
 const taskRouter = require("./routers/tasksRouter");
